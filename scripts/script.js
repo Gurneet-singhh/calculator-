@@ -1,7 +1,7 @@
 
-const sunIcon = "assets/SunIcon.svg";
-const moonIcon = "assets/MoonIcon.svg";
-const themeIcon = document.getElementById("theme-icon");
+// const sunIcon = "assets/SunIcon.svg";
+// const moonIcon = "assets/MoonIcon.svg";
+// const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
 const toast = document.getElementById("toast");
 
@@ -16,16 +16,21 @@ function calculate(value) {
     res.value = calculatedValue;
   }
 }
-
+document.querySelector('.hb').addEventListener('click' , function(){
+  document.querySelector('.developers').classList.toggle('hidden');
+});
+document.querySelector('.close').addEventListener('click' , function(){
+  document.querySelector('.developers').classList.toggle('hidden');
+});
 // Swaps the stylesheet to achieve dark mode.
 const as =['rgb(20, 19, 19)', 'rgb(7, 210, 199)'];
 const c =['rgb(255, 255, 255)', 'rgb(87, 87, 87)'];
 const bc =['rgb(47, 51, 50)', '#fff'];
 let i = 1;
 function changeTheme() {
-  setTimeout(() => {
-    toast.innerHTML = "Calculator";
-  }, 1500);
+  // setTimeout(() => {
+  //   toast.innerHTML = "Calculator";
+  // }, 1500);
   theme = !theme;
   document.querySelector('.wrapper').style.backgroundColor = as[i];
   const ds =document.querySelectorAll('input');
